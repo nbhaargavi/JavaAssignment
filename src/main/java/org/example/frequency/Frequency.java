@@ -26,9 +26,7 @@ public class Frequency {
         l.log(Level.INFO,() ->" "+hMap);
         PriorityQueue<HashMap.Entry<String, Integer>> queue = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
-        for (Map.Entry<String, Integer> e : hMap.entrySet()) {
-            queue.add(e);
-        }
+       queue.addAll(hMap.entrySet());
         while (!queue.isEmpty()) {
             l.log(Level.INFO,() ->"\n" + queue.poll());
         }
