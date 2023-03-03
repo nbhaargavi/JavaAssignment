@@ -1,9 +1,9 @@
-package org.example;
+package org.example.tictactoe;
 import java.util.Scanner;
 import java.util.logging.*;
-class tictactoe {
+public class Tictactoe {
     Logger l = Logger.getLogger("kitty");
-    static void draw(char[][] board) {
+    public static void draw(char[][] board) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
 //                int finalI = i;
@@ -13,7 +13,7 @@ class tictactoe {
             System.out.println(" ");
         }
     }
-    static char won(char[][] board) {
+    public static char won(char[][] board) {
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] !='-') {
                 return board[i][0];
@@ -32,7 +32,7 @@ class tictactoe {
         }
         return '-';
     }
-    static boolean tied(char[][] board) {
+    public static boolean tied(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == '-') {

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.studentTest;
 public class Studgetset {
     String name;
     int age;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.calculator;
 
 class Add extends Calc
 {

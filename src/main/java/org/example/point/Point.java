@@ -1,11 +1,11 @@
-package org.example;
+package org.example.point;
 import java.util.Scanner;
 import java.util.logging.*;
 public class Point implements Cloneable {
     Logger l=Logger.getLogger("kitty");
     private Integer x;
     private Integer y;
-    public Point( Integer x, Integer y) {
+   Point( Integer x, Integer y) {
         this.x = x;
         this.y = y;
     }
@@ -25,7 +25,7 @@ public class Point implements Cloneable {
             return this;
         }
     }
-   static void point() {
+   public static void point() {
         Logger l=Logger.getLogger("kitty");
         Scanner sc=new Scanner(System.in);
         l.info("enter the x coordinate:");

@@ -1,9 +1,9 @@
-package org.example;
+package org.example.shapes;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.*;
 public class shapes {
-   static void sh() throws InputMismatchException{
+   public static void sh() throws InputMismatchException{
        Scanner sc = new Scanner(System.in);
        Logger l = Logger.getLogger("kitty");
        double[] dimensions = new double[3];

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sets;
 import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.logging.Level;
@@ -22,7 +22,7 @@ public class Treeset  {
         l.log(Level.INFO, () -> "Cloned tree set : " + tset);
     }
 
-    public static void choice() {
+    public void choice() {
         Scanner scan=new Scanner(System.in);
         System.out.println("1.HashMap");
         System.out.println("2.HashSet");
@@ -34,15 +34,18 @@ public class Treeset  {
         do {
             switch (ch) {
                 case 1:
-                    Hashmap.map();
+                    Hashmap hm=new Hashmap();
+                    hm.map();
                     con=false;
                     break;
                 case 2:
-                    Hashset.set();
+                    Hashset hs=new Hashset();
+                    hs.set();
                     con=false;
                     break;
                 case 3:
-                    Treeset.ts();
+                    Treeset te=new Treeset();
+                    te.ts();
                     con=false;
                     break;
             }

@@ -1,16 +1,14 @@
-package org.example;
+package org.example.creditcard;
 import java.util.Scanner;
-import java.util.logging.*;
 import java.util.logging.Logger;
-
-public class Credit implements Cloneable {
+public class Credit {
     Logger l=Logger.getLogger("kitty");
     private String cname;
     private Integer cno;
     private Integer cnum = 501005463;
     private Integer expdate;
 
-    public Credit( String cname,Integer cno, Integer expdate) {
+   Credit( String cname,Integer cno, Integer expdate) {
         this.cname=cname;
         this.cno=cno;
         this.expdate=expdate;

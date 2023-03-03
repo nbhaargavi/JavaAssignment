@@ -1,4 +1,4 @@
-package org.example;
+package org.example.frequency;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;

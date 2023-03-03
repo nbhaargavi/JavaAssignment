@@ -1,4 +1,4 @@
-package org.example;
+package org.example.shapes;
 import java.util.logging.Logger;
 public class shapedetails {
     Logger l = Logger.getLogger("kitty");
@@ -10,7 +10,6 @@ public class shapedetails {
         this.dimensions = dimensions;
 
     }
-
     public double getPerimeter() {
         double perimeter = 0;
         if (type.equals("triangle")) {
@@ -22,7 +21,6 @@ public class shapedetails {
         }
         return perimeter;
     }
-
     public double getArea() {
         double area = 0;
         if (type.equals("triangle")) {

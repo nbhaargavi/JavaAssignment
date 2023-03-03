@@ -1,9 +1,9 @@
-package org.example;
+package org.example.calculator;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
 
-class Calculator {
+public class Calculator {
     public static void ca() throws ArithmeticException
     {
    Logger l=Logger.getLogger("kitty");

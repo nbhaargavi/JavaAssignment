@@ -1,11 +1,11 @@
-package org.example;
+package org.example.sets;
 
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
  public class Hashmap {
-    public static void map() {
+    public void map() {
         Logger l = Logger.getLogger("kitty");
         HashMap<Integer, String> hmap = new HashMap<Integer, String>();
         hmap.put(1001, "Wings Of Fire");

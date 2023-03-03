@@ -1,4 +1,4 @@
-package org.example;
+package org.example.stud;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -10,18 +10,18 @@ public class stud {
     int gradelvl;
     int gpa;
 
-    public stud(String name, int gradelvl, int gpa) {
+   stud(String name, int gradelvl, int gpa) {
         this.name = name;
         this.gradelvl = gradelvl;
         this.gpa = gpa;
     }
 
-    void update(int update) {
+    public void update(int update) {
         gpa = update;
         l.log(Level.INFO, () -> "The updated GPA is " + gpa);
     }
 
-    void stud() {
+   public void stud() {
         l.log(Level.INFO, () -> name + " has a gpa of " + gpa);
     }
 

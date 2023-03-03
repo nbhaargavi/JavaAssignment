@@ -1,9 +1,9 @@
-package org.example;
+package org.example.sets;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
 public class Hashset {
-    public static void set()
+    public void set()
     {
         Logger l=Logger.getLogger("kitty");
         HashSet<String> hset = new HashSet<String>();

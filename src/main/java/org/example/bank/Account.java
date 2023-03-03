@@ -1,12 +1,12 @@
-package org.example;
+package org.example.bank;
 import java.util.logging.*;
 class AmntNotEnoughException extends Exception{
     public AmntNotEnoughException (String message) {
         super(message);
     }
 }
-class Account {
-    static Logger l=Logger.getLogger("kitty");
+public class Account {
+    Logger l=Logger.getLogger("kitty");
     static String accntholdername;
     static int id;
     double balance;
@@ -41,13 +41,4 @@ class Account {
             balance = balance + amount;
             return balance;
         }
-
-    public static void bank1() {
-        Account details=new Account("bhaargavi", 1122, 20000);
-        l.log(Level.INFO, () -> "Account Holder name:" + " " + accntholdername);
-        l.log(Level.INFO, () -> "Account ID:" + " " + id);
-        l.log(Level.INFO, () -> "Initial Balance:" + details.getBalance());
-        l.log(Level.INFO, () -> "Balance after Withdraw:" + " " + details.withdraw(2500));
-        l.log(Level.INFO, () -> "Balance after deposit" + " " + details.deposit(3000));
-    }
 }
