@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 public class Frequency {
     public Frequency() {
     }
+
    public void words() throws FileNotFoundException {
         Logger l = Logger.getLogger("kitty");
         String f = "C:\\frquency\\textfile.txt";
