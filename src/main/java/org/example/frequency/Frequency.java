@@ -24,9 +24,7 @@ public class Frequency {
             }
         }
         l.log(Level.INFO,() ->" "+hMap);
-        PriorityQueue<HashMap.Entry<String, Integer>> queue = new PriorityQueue<>((a, b) -> {
-            return b.getValue() - a.getValue();
-        });
+        PriorityQueue<HashMap.Entry<String, Integer>> queue = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
         for (Map.Entry<String, Integer> e : hMap.entrySet()) {
             queue.add(e);

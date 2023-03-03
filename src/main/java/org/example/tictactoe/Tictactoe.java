@@ -5,6 +5,9 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Tictactoe {
+    private Tictactoe(){
+
+    }
     static PrintStream l = new PrintStream((new FileOutputStream(FileDescriptor.out)));
     public static void draw(char[][] board) {
         for (int i = 0; i < 3; i++) {
