@@ -1,14 +1,17 @@
 package org.example.tictactoe;
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
-import java.util.logging.*;
+
 public class Tictactoe {
-    Logger l = Logger.getLogger("kitty");
+    static PrintStream l = new PrintStream((new FileOutputStream(FileDescriptor.out)));
     public static void draw(char[][] board) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.print((board[i][j]));
+                l.print(board[i][j]);
             }
-            System.out.println(" ");
+            l.println(" ");
         }
     }
     public static char won(char[][] board) {
@@ -43,11 +46,10 @@ public class Tictactoe {
     public static void tic() {
         int a = 0;
         do {
-            Logger l = Logger.getLogger("kitty");
             Scanner sc = new Scanner(System.in);
-            l.info("Enter player 1 name");
+            l.println("Enter player 1 name");
             String p1 = sc.nextLine();
-            l.info("Enter player 2 name");
+            l.println("Enter player 2 name");
             String p2 = sc.nextLine();
             int stop = 1;
             char[][] board = new char[3][3];
@@ -68,37 +70,37 @@ public class Tictactoe {
                     symbol = 'o';
                 }
                 if (isp1) {
-                    l.log(Level.INFO, () -> p1 + " turn");
+                    l.println( p1 + " turn");
                 } else {
-                    l.log(Level.INFO, () -> p2 + " turn");
+                    l.println( p2 + " turn");
                 }
                 try{
-                    l.info("Enter the row position");
+                    l.println("Enter the row position");
                     int r = sc.nextInt();
-                    l.info("Enter the column position");
+                    l.println("Enter the column position");
                     int c = sc.nextInt();
 
                     if (board[r][c] != '-') {
-                        l.info("Move made already");
+                        l.println("Move made already");
                         continue;
                     } else {
                         board[r][c] = symbol;
                     }
                 } catch(ArrayIndexOutOfBoundsException e) {
-                    l.log(Level.INFO, () -> "Array index out of bounds: " + e.getMessage());
+                    l.println( "Array index out of bounds: " + e.getMessage());
                 }
                 char win = won(board);
                 boolean tie = tied(board);
                 if (win == 'x') {
-                    l.log(Level.INFO, () -> p1 + "have won");
+                    l.println(p1 + "have won");
                     gameended = true;
                     stop = 0;
                 } else if (win == 'o') {
-                    l.log(Level.INFO, () -> p2 + " have won");
+                    l.println( p2 + " have won");
                     gameended = true;
                     stop = 0;
                 } else if (tie) {
-                    l.info("Match tied ");
+                    l.println("Match tied ");
                     gameended = true;
                     stop = 0;
                 } else {
@@ -106,7 +108,7 @@ public class Tictactoe {
                 }
                 draw(board);
             }
-            l.info("Press 1 for continue playing ");
+            l.println("Press 1 for continue playing ");
             a = sc.nextInt();
         } while (a == 1) ;
     }
