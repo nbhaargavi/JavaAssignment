@@ -6,9 +6,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Frequency {
-    private Frequency() {
+    public Frequency() {
     }
-   public static void words() throws FileNotFoundException {
+   public void words() throws FileNotFoundException {
         Logger l = Logger.getLogger("kitty");
         String f = "C:\\frquency\\textfile.txt";
         Scanner sc = new Scanner(new File(f));

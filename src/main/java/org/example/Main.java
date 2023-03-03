@@ -58,7 +58,7 @@ public class Main {
                     Calculator.ca();
                     break;
                 case 10:
-                    Frequency.words();
+                    Frequency fr=new Frequency();fr.words();
                     break;
                 case 11:
                     Tictactoe.tic();
