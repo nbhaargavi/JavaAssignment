@@ -2,7 +2,7 @@ package org.example.bank;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class mainacc {
+public class Mainacc {
     Logger l=Logger.getLogger("kitty");
     public void bank1() {
 

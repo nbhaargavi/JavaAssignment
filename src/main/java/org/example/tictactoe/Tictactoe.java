@@ -6,8 +6,6 @@ public class Tictactoe {
     public static void draw(char[][] board) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-//                int finalI = i;
-//                int finalJ = j;
                 System.out.print((board[i][j]));
             }
             System.out.println(" ");
@@ -42,9 +40,6 @@ public class Tictactoe {
         }
         return true;
     }
-    //    static boolean check(int c, int r) {
-//        return (r > 2 || c > 2 || r < 0 || c < 0);
-//    }
     public static void tic() {
         int a = 0;
         do {
@@ -83,9 +78,6 @@ public class Tictactoe {
                     l.info("Enter the column position");
                     int c = sc.nextInt();
 
-//                if (check(c, r)) {
-//                    l.info("Invalid input");
-//                    continue;}
                     if (board[r][c] != '-') {
                         l.info("Move made already");
                         continue;

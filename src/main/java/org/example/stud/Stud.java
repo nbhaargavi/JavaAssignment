@@ -4,13 +4,13 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class stud {
+public class Stud {
     static Logger l = Logger.getLogger("kitty");
     String name;
     int gradelvl;
     int gpa;
 
-   stud(String name, int gradelvl, int gpa) {
+   Stud(String name, int gradelvl, int gpa) {
         this.name = name;
         this.gradelvl = gradelvl;
         this.gpa = gpa;
@@ -21,7 +21,7 @@ public class stud {
         l.log(Level.INFO, () -> "The updated GPA is " + gpa);
     }
 
-   public void stud() {
+   public void gpadisplay() {
         l.log(Level.INFO, () -> name + " has a gpa of " + gpa);
     }
 
@@ -35,9 +35,9 @@ public class stud {
             var gpa = scan.nextInt();
             l.info("Enter student's updated gpa");
             var ugpa = scan.nextInt();
-            stud s1 = new stud(str, gpa, ugpa);
+            Stud s1 = new Stud(str, gpa, ugpa);
             s1.update(ugpa);
-            s1.stud();
+            s1.gpadisplay();
         } catch (InputMismatchException e) {
             l.log(Level.INFO, () -> "input mismatch ! Please enter a valid input.");
         }

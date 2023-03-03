@@ -4,7 +4,8 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Treeset  {
-    public static void ts() {
+    Logger l = Logger.getLogger("kitty");
+    public void ts() {
         Logger l = Logger.getLogger("kitty");
         TreeSet<String> tset = new TreeSet<String>();
         tset.add("timothee");
@@ -24,12 +25,11 @@ public class Treeset  {
 
     public void choice() {
         Scanner scan=new Scanner(System.in);
-        System.out.println("1.HashMap");
-        System.out.println("2.HashSet");
-        System.out.println("1.TreeSet");
-        System.out.println("enter a choice");
+       l.info("1.HashMap");
+        l.info("2.HashSet");
+        l.info("1.TreeSet");
+        l.info("enter a choice");
         int ch = scan.nextInt();
-        int a;
         boolean con=true;
         do {
             switch (ch) {
@@ -48,6 +48,8 @@ public class Treeset  {
                     te.ts();
                     con=false;
                     break;
+                default:
+                    l.info("Enter a valid case");
             }
             System.exit(0);
         }while(con);

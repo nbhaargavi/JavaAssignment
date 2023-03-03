@@ -1,14 +1,14 @@
 package org.example;
-import org.example.bank.mainacc;
+import org.example.bank.Mainacc;
 import org.example.calculator.Calculator;
 import org.example.creditcard.Credit;
 import org.example.db.Creation;
 import org.example.frequency.Frequency;
 import org.example.point.Point;
 import org.example.sets.Treeset;
-import org.example.shapes.shapes;
-import org.example.stud.stud;
-import org.example.studentTest.StudentTest;
+import org.example.shapes.Shapes;
+import org.example.stud.Stud;
+import org.example.StudentTest.StudentTest;
 import org.example.tictactoe.Tictactoe;
 
 import java.io.FileNotFoundException;
@@ -28,15 +28,15 @@ public class Main {
             switch (ch)
             {
                 case 1:
-                    mainacc ma=new mainacc();
+                    Mainacc ma=new Mainacc();
                     ma.bank1();
                     break;
                 case 2:
-                  shapes s=new shapes();
+                  Shapes s=new Shapes();
                   s.sh();
                   break;
                 case 3:
-                    stud.st();
+                    Stud.st();
                     break;
                 case 4:
                     Creation.db1();
@@ -65,6 +65,7 @@ public class Main {
                     break;
                 case 12:
                     System.exit(0);
+                    break;
                 default:
                     l.info("Invalid choice");
             }

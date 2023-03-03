@@ -1,10 +1,14 @@
-package org.example.studentTest;
+package org.example.StudentTest;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;
 import java.util.Scanner;
 
 public class StudentTest {
+    private StudentTest()
+    {
+
+    }
     public static void stu() {
         Logger l = Logger.getLogger("kitty");
         List<Studgetset> mylist = new ArrayList<Studgetset>();

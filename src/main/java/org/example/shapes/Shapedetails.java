@@ -1,11 +1,11 @@
 package org.example.shapes;
 import java.util.logging.Logger;
-public class shapedetails {
+public class Shapedetails {
     Logger l = Logger.getLogger("kitty");
     private String type;
 
     private double[] dimensions;
-    public shapedetails(String type, double[] dimensions) {
+    public Shapedetails(String type, double[] dimensions) {
         this.type = type;
         this.dimensions = dimensions;
 
