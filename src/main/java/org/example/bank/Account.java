@@ -7,8 +7,8 @@ class AmntNotEnoughException extends Exception{
 }
 public class Account {
     Logger l=Logger.getLogger("kitty");
-    static String accntholdername;
-    static int id;
+    String accntholdername;
+    int id;
     double balance;
     Account(String accntname, int newid, double newbalance) {
         accntholdername = accntname;

@@ -4,6 +4,9 @@ import java.util.logging.*;
 import java.util.logging.Logger;
 
 public class Calculator {
+    private Calculator() {
+
+    }
     public static void ca() throws ArithmeticException
     {
    Logger l=Logger.getLogger("kitty");

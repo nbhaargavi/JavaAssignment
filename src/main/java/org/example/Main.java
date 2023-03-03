@@ -8,7 +8,7 @@ import org.example.point.Point;
 import org.example.sets.Treeset;
 import org.example.shapes.Shapes;
 import org.example.stud.Stud;
-import org.example.StudentTest.StudentTest;
+import org.example.studentest.StudentTest;
 import org.example.tictactoe.Tictactoe;
 
 import java.io.FileNotFoundException;

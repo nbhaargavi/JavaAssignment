@@ -1,4 +1,4 @@
-package org.example.StudentTest;
+package org.example.studentest;
 import java.util.*;
 import java.util.logging.*;
 import java.util.logging.Logger;

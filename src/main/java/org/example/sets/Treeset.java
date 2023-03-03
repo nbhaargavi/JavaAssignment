@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 public class Treeset  {
     Logger l = Logger.getLogger("kitty");
     public void ts() {
-        Logger l = Logger.getLogger("kitty");
         TreeSet<String> tset = new TreeSet<String>();
         tset.add("timothee");
         tset.add("chalamet");

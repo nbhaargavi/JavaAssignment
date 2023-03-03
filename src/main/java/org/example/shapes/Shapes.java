@@ -19,8 +19,8 @@ public class Shapes {
            if (type.equals("1")) {
                l.info("Enter the radius ");
                dimensions[0] = sc.nextInt();
-               l.log(Level.INFO, () -> "Area of " + type + ": " + s1.getArea());
-               l.log(Level.INFO, () -> "Perimeter of " + type + ": " + s1.getPerimeter());
+               l.log(Level.INFO, () -> "Area of :" + type + ": " + s1.getArea());
+               l.log(Level.INFO, () -> "Perimeter of" + type + ": " + s1.getPerimeter());
            } else if (type.equals("2")) {
                l.info("Enter the length ");
                dimensions[0] = sc.nextInt();
