@@ -9,7 +9,8 @@ public class Frequency {
     private Frequency() {
     }
    public static void words() throws FileNotFoundException {
-        Logger l = Logger.getLogger("kitty");
+       PriorityQueue<HashMap.Entry<String, Integer>> queue;
+       Logger l = Logger.getLogger("kitty");
         String f = "C:\\frquency\\textfile.txt";
         Scanner sc = new Scanner(new File(f));
         String data = sc.nextLine();
@@ -24,7 +25,7 @@ public class Frequency {
            }
        }
         l.log(Level.INFO,() ->" "+hMap);
-        PriorityQueue<HashMap.Entry<String, Integer>> queue = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        queue= new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
        queue.addAll(hMap.entrySet());
         while (!queue.isEmpty()) {
