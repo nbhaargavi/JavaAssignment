@@ -14,15 +14,15 @@ public class Frequency {
         Scanner sc = new Scanner(new File(f));
         String data = sc.nextLine();
         String[] arr = data.split(" ");
-         HashMap<String, Integer> hMap = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (hMap.containsKey(arr[i])) {
-                int count = hMap.get(arr[i]);
-                hMap.put(arr[i], count + 1);
-            } else {
-                hMap.put(arr[i], 1);
-            }
-        }
+        HashMap<String, Integer> hMap = new HashMap<>();
+       for (String s : arr) {
+           if (hMap.containsKey(s)) {
+               int count = hMap.get(s);
+               hMap.put(s, count + 1);
+           } else {
+               hMap.put(s, 1);
+           }
+       }
         l.log(Level.INFO,() ->" "+hMap);
         PriorityQueue<HashMap.Entry<String, Integer>> queue = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
